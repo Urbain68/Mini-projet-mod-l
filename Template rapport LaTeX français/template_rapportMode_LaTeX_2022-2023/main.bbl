@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{BrauerBiology}
+F.~Brauer and C.~Castillo-Chavez.
+\newblock {\em Mathematical Models in Population Biology and Epidemiology}.
+\newblock Springer New York, NY, 2012.
+
+\bibitem{Holl2stoch}
+N.~Shi C.~Ji, D.~Jiang.
+\newblock Analysis of a predator-prey model with modified leslie-gower and
+  holling-type ii schemes with stochastic perturbation.
+\newblock {\em Journal of Mathematical Analysis and Applications}, Volume 359,
+  Issue 2(page 482-498), 2009.
+
+\bibitem{Seidemann}
+M.~Seidemann.
+\newblock Improving engineering reports and talks.
+\newblock {\em IEEE Transactions on Engineering Writing and Speech}, 1967.
+
+\bibitem{ProtecZone}
+M.~Wang Y.~Du, R.~Peng.
+\newblock Effect of a protection zone in the diffusive leslie predator-prey
+  model.
+\newblock {\em Journal of Differential Equations}, Volume 246(page 3932-3956),
+  2009.
+
+\end{thebibliography}

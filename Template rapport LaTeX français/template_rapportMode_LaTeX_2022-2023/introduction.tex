@@ -1,0 +1,43 @@
+\chapter{Introduction (\textit{1 page max})}
+\label{ch:Introduction}
+
+
+\section{Contexte et objectif}
+\label{sec:Contexte}
+
+La modélisation des dynamiques de populations a toujours été un sujet d'intérêt majeur afin de comprendre l'évolution de la biodiversité. En effet, la modélisation de l'évolution d'une population permet d'anticiper les espèces en danger et de planifier la protection de la biodiversité.
+
+En particulier, les systèmes proie-prédateurs permettent de modéliser les interactions entre différentes espèces. On peut ainsi prévoir la prolifération d'espèces dangeureuses en modélisant le comportement de chasse entre des proies et des prédateurs. En particulier, l'utilisation d'un système d'équations différentielles multiples permet aussi de prendre en compte l'influence de l'environnement.
+
+Le principal défi avec de tels systèmes est l'étude de la stabilité, et donc de la pertinence, des solutions trouvées sur le temps long. En effet, les systèmes proi-prédateur ont tendance à avoir des comportements chaotiques
+
+Dans la partie introductive, il est conseillé de commencer par un paragraphe sur le \textbf{contexte}, en montrant l’intérêt en termes d’applications, d’innovation, d’apport scientifique, etc. Le \textbf{but} de votre mini-projet doit être clairement écrit dans la partie introductive. L’objectif du rapport est de présenter un produit fini répondant à une \textbf{étude théorique} de modélisation et une \textbf{validation} (simulation).
+
+\section{Etat de l’art}
+\label{sec:Etat}
+
+Historiquement, l'étude de systèmes proie-prédateur est très liées à la modélisation des populations. En particulier, comme le rappelle \cite{BrauerBiology}. En effet, dans un tel système, on considère que la population de proie seule est capable de proliférer. Se pose donc la question du modèle à utiliser afin de représenter la disponibilité des ressources.
+Les modèles les plus classiques afin de décrire des sytèmes proie-prédateurs sont rappelés dans \cite{Holl2stoch} sous la forme générale :
+\begin{equation}
+    \begin{cases}
+        \dot{x}(t) = a x(t) - \phi (x(t)) y(t) \\
+        \dot{y}(t) = -b y(t) + c \phi (x(t)) y(t)
+    \end{cases}
+\end{equation}
+avec différents choix possibles pour la fonction $\phi$ en fonction de la modélisation choisie.
+
+Comme dans \cite{ProtecZone}, certains chercheurs s'intéressent aussi à l'influence spatiale de l'environnement sur la dynamique des populations, introduisant ainsi des facteurs de diffusion temporelle dans le sustème ci-dessus.
+
+Après avoir obtenu un système différentiel cohérent, il s'agit ensuite de le transformer en un système à temps discret. En effet, on peut dans une bonne approximation étudier les interactions proie prédateur de manière discréte dans le temps, tous les six mois par exemple.
+
+\section{Contribution}
+\label{sec:Contribution}
+
+Dans tout projet, il est important de mettre en valeur l’\textbf{originalité} (apport/contribution) de vos approches/démarches.
+
+\section{Structure du rapport}
+\label{sec:Structure}
+
+Le Chapitre \ref{ch:modele_continu} présente le \textit{modèle mathématique à état continu}. Le Chapitre \ref{ch:simu} porte sur l’\textit{analyse des résultats de simulation obtenus en utilisant le modèle à état continu}. Le Chapitre \ref{chapitre:etat_discret} se focalise sur le développement du \textit{modèle à évènements discrets} (\textbf{on ne demande pas de simulateur pour le modèle à évènements discrets}). Finalement, les conclusions et perspectives sont présentées.
+
+\textcolor{red}{\textbf{Remarque sur les livrables.} Une archive des programmes Matlab ou Python sera également fournie avec le rapport, via Edunao.}

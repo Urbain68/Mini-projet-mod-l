@@ -11,8 +11,6 @@ En particulier, les systèmes proie-prédateurs permettent de modéliser les int
 
 Le principal défi avec de tels systèmes est l'étude de la stabilité, et donc de la pertinence, des solutions trouvées sur le temps long. En effet, les systèmes proi-prédateur ont tendance à avoir des comportements chaotiques
 
-Dans la partie introductive, il est conseillé de commencer par un paragraphe sur le \textbf{contexte}, en montrant l’intérêt en termes d’applications, d’innovation, d’apport scientifique, etc. Le \textbf{but} de votre mini-projet doit être clairement écrit dans la partie introductive. L’objectif du rapport est de présenter un produit fini répondant à une \textbf{étude théorique} de modélisation et une \textbf{validation} (simulation).
-
 \section{Etat de l’art}
 \label{sec:Etat}
 
@@ -33,11 +31,17 @@ Après avoir obtenu un système différentiel cohérent, il s'agit ensuite de le
 \section{Contribution}
 \label{sec:Contribution}
 
-Dans tout projet, il est important de mettre en valeur l’\textbf{originalité} (apport/contribution) de vos approches/démarches.
+Ce rapport se propose d'étudier un système proie-prédateur dans lequel l'influence des saisons est prise en compte de manière sommaire.
+Concrètement, il s'agit de partir d'un modèle assez simple auquel on rajoute un facteur oscillant pour ce qui est de l'interaction entre proies et prédateurs: 
+\begin{equation}
+    \label{eq:syst_continu}
+    \begin{cases}
+        \dot{x}(t) = a x(t) - \beta_0 ( 1 - \frac{1}{2} \cos(\pi t)) x(t) y(t) \\
+        \dot{y}(t) = -b y(t) + c \beta_0 ( 1 - \frac{1}{2} \cos(\pi t)) x(t) y(t)
+    \end{cases}
+\end{equation}
 
 \section{Structure du rapport}
 \label{sec:Structure}
 
-Le Chapitre \ref{ch:modele_continu} présente le \textit{modèle mathématique à état continu}. Le Chapitre \ref{ch:simu} porte sur l’\textit{analyse des résultats de simulation obtenus en utilisant le modèle à état continu}. Le Chapitre \ref{chapitre:etat_discret} se focalise sur le développement du \textit{modèle à évènements discrets} (\textbf{on ne demande pas de simulateur pour le modèle à évènements discrets}). Finalement, les conclusions et perspectives sont présentées.
-
-\textcolor{red}{\textbf{Remarque sur les livrables.} Une archive des programmes Matlab ou Python sera également fournie avec le rapport, via Edunao.}
+Le Chapitre \ref{ch:modele_discret} présente le \textit{modèle mathématique à état discret}. Le Chapitre \ref{ch:simu} porte sur l’\textit{analyse des résultats de simulation obtenus en utilisant le modèle présenté au chapitre précédent}. Le Chapitre \ref{chapitre:etat_discret} se focalise sur le développement du \textit{modèle à évènements discrets}. Finalement, les conclusions et perspectives sont présentées.

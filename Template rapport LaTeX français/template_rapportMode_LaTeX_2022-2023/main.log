@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  4 JAN 2023 11:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  10 JAN 2023 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/theon/Documents/Cours_CS/1A-S5/Modélisation/Mini-Projets/Template rapport mini-projet/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex"
-(c:/Users/theon/Documents/Cours_CS/1A-S5/Modélisation/Mini-Projets/Template rapport mini-projet/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex
+**"c:/Users/theon/Documents/GitHub/Mini-projet-mod-l/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex"
+(c:/Users/theon/Documents/GitHub/Mini-projet-mod-l/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2022-11-02> (c:/texlive/2022/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2022/07/02 v1.4n Standard LaTeX document class
@@ -655,7 +655,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 (./title.tex
-<./logo.png, id=58, 381.8265pt x 45.771pt>
+<./logo.png, id=70, 381.8265pt x 45.771pt>
 File: ./logo.png Graphic file (type png)
 <use ./logo.png>
 Package pdftex.def Info: ./logo.png  used on input line 5.
@@ -670,56 +670,56 @@ Package pdftex.def Info: ./logo.png  used on input line 5.
 
 ] (./introduction.tex
 Chapitre 1.
-
+) (./Chapitre2.tex
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.43 ...ment fournie avec le rapport, via Edunao.}
-                                                   [1
+l.1 \chapter
+            {Modèle à état discret (\textit{2 pages max})} [1
 
-]) (./Chapitre2.tex [2]
+]
 Chapitre 2.
-) (./Chapitre3.tex [3
+) (./Chapitre3.tex [2
 
 ]
 Chapitre 3.
-) (./Chapitre4.tex [4
+) (./Chapitre4.tex [3
 
 ]
 Chapitre 4.
-) (./Conclusion.tex [5
+) (./Conclusion.tex [4
 
 ]
 Chapitre 5.
-) (./annexes.tex (./annexe1.tex [6
+) (./annexes.tex (./annexe1.tex [5
 
 ]
-<figures/smile.jpg, id=138, 899.7615pt x 779.3115pt>
+<figures/smile.jpg, id=156, 899.7615pt x 779.3115pt>
 File: figures/smile.jpg Graphic file (type jpg)
 <use figures/smile.jpg>
 Package pdftex.def Info: figures/smile.jpg  used on input line 66.
 (pdftex.def)             Requested size: 142.26378pt x 123.21785pt.
- [7
+ [6
 
-])) [8 <./figures/smile.jpg>] (./main.bbl) [9
+])) [7 <./figures/smile.jpg>] (./main.bbl) [8
 
 ] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 064E1DEBC9F061B6F1A8EBB3B48429FB;2464.
+(rerunfilecheck)             Checksum: 3B457B791227D89AC4D8BDC54CE7B1C1;3028.
  ) 
 Here is how much of TeX's memory you used:
- 24273 strings out of 474968
- 451252 string characters out of 5780081
- 791787 words of memory out of 5000000
- 45309 multiletter control sequences out of 15000+600000
+ 24283 strings out of 474968
+ 451256 string characters out of 5780081
+ 791866 words of memory out of 5000000
+ 45314 multiletter control sequences out of 15000+600000
  486020 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,8n,133p,732b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (11 pages, 478376 bytes).
+ 99i,8n,133p,624b,533s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbi2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (10 pages, 500439 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 127 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 278 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,23 @@
-\chapter{Modèle à état continu (\textit{2 pages max})}
-\label{ch:modele_continu}
+\chapter{Modèle à état discret (\textit{2 pages max})}
+\label{ch:modele_discret}
+
+Ce chapitre se propose d'étudier le système présenté en (\ref{eq:syst_continu}) en le transformant sous la forme d'un système discret, puis en en étudiant la points d'équilibre et leur stabilité.
+
+\section{Modèle proposé}
+
+Ce rapport cherche à étudier l'influence des saisons sur la dynamique d'évolution de deux groupes de population, des proies dont la densité de population sera notée $x$ et des prédateurs de densité $y$, qui chassent ces proies afin de se reproduire. Cette étude se propose de modéliser l'influence des saisons par la multiplication du terme d'interaction entre proies et prédateurs par un facteur harmonique.
+
+Pour cela, cette étude se base sur le système proposé dans \cite{ChaosControl} :
+\begin{equation}
+    \begin{cases}
+        \dot{x}(t) = a x(t) - \frac{\beta x(t) y(t)}{x + \gamma}  \\
+        \dot{y}(t) = -b y(t) + c \phi (x(t)) y(t)
+    \end{cases}
+\end{equation}
+\section{Etude théorique des points d'équilibre}
+
+\section{Hypothèses du modèle}
+
 
 En début de chapitre, il est conseillé d'annoncer ce qui va être traité par la suite et dans quel but. Ensuite, il s’agit de traiter la problématique exposée en début du chapitre. Il est important de citer les différentes sources utilisées pour réaliser votre mini-projet.
 

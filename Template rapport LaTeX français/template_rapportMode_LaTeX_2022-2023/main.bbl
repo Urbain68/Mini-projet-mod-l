@@ -12,22 +12,9 @@ N.~Shi C.~Ji, D.~Jiang.
 \newblock {\em Journal of Mathematical Analysis and Applications}, Volume 359,
   Issue 2(page 482-498), 2009.
 
-\bibitem{ChaosControl}
-Qamar Din.
-\newblock Complexity and chaos control in a discrete-time prey-predator model.
-\newblock {\em Commun Nonlinear Sci Numer Simulat}, Volume 4949(page 113-134),
-  2017.
-
 \bibitem{Seidemann}
 M.~Seidemann.
 \newblock Improving engineering reports and talks.
 \newblock {\em IEEE Transactions on Engineering Writing and Speech}, 1967.
-
-\bibitem{ProtecZone}
-M.~Wang Y.~Du, R.~Peng.
-\newblock Effect of a protection zone in the diffusive leslie predator-prey
-  model.
-\newblock {\em Journal of Differential Equations}, Volume 246(page 3932-3956),
-  2009.
 
 \end{thebibliography}

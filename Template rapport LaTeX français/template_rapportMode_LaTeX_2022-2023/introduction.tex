@@ -1,15 +1,14 @@
 \chapter{Introduction (\textit{1 page max})}
 \label{ch:Introduction}
 
-
 \section{Contexte et objectif}
 \label{sec:Contexte}
 
 La modélisation des dynamiques de populations a toujours été un sujet d'intérêt majeur afin de comprendre l'évolution de la biodiversité. En effet, la modélisation de l'évolution d'une population permet d'anticiper les espèces en danger et de planifier la protection de la biodiversité.
 
-En particulier, les systèmes proie-prédateurs permettent de modéliser les interactions entre différentes espèces. On peut ainsi prévoir la prolifération d'espèces dangeureuses en modélisant le comportement de chasse entre des proies et des prédateurs. En particulier, l'utilisation d'un système d'équations différentielles multiples permet aussi de prendre en compte l'influence de l'environnement.
+En particulier, les systèmes proie-prédateurs permettent de modéliser les interactions entre différentes espèces. On peut ainsi prévoir la prolifération d'espèces dangeureuses en modélisant la dynamique de chasse entre des proies et des prédateurs. La formalisation à travers un système d'équations différentielles multiples permet aussi de prendre en compte l'influence de l'environnement.
 
-Le principal défi avec de tels systèmes est l'étude de la stabilité, et donc de la pertinence, des solutions trouvées sur le temps long. En effet, les systèmes proi-prédateur ont tendance à avoir des comportements chaotiques
+Le principal défi avec de tels systèmes est l'étude de la stabilité, et donc de la pertinence, des solutions trouvées sur le temps long. En effet, les systèmes proie-prédateur ont tendance à avoir des comportements chaotiques.
 
 \section{Etat de l’art}
 \label{sec:Etat}
@@ -24,22 +23,15 @@ Les modèles les plus classiques afin de décrire des sytèmes proie-prédateurs
 \end{equation}
 avec différents choix possibles pour la fonction $\phi$ en fonction de la modélisation choisie.
 
-Comme dans \cite{ProtecZone}, certains chercheurs s'intéressent aussi à l'influence spatiale de l'environnement sur la dynamique des populations, introduisant ainsi des facteurs de diffusion temporelle dans le sustème ci-dessus.
-
 Après avoir obtenu un système différentiel cohérent, il s'agit ensuite de le transformer en un système à temps discret. En effet, on peut dans une bonne approximation étudier les interactions proie prédateur de manière discréte dans le temps, tous les six mois par exemple.
 
 \section{Contribution}
 \label{sec:Contribution}
 
-Ce rapport se propose d'étudier un système proie-prédateur dans lequel l'influence des saisons est prise en compte de manière sommaire.
-Concrètement, il s'agit de partir d'un modèle assez simple auquel on rajoute un facteur oscillant pour ce qui est de l'interaction entre proies et prédateurs: 
-\begin{equation}
-    \label{eq:syst_continu}
-    \begin{cases}
-        \dot{x}(t) = a x(t) - \beta_0 ( 1 - \frac{1}{2} \cos(\pi t)) x(t) y(t) \\
-        \dot{y}(t) = -b y(t) + c \beta_0 ( 1 - \frac{1}{2} \cos(\pi t)) x(t) y(t)
-    \end{cases}
-\end{equation}
+Ce rapport se propose d'étudier un système proie-prédateur dans lequel on prend en compte le nombre fini de ressource à disposition de chaque espèce. Cela revient à dire que s'il y a plus de proies à ressources constantes, alors les différents membres de cette espèce vont rentrer en compétition les uns avec les autres pour les ressources disponibles.
+Concrètement, cela revient à ajouter un facteur d'atténuation de la forme $- x(t)^2$ (resp. $- y(t)^2$) à l'équation régissant la population de proies (resp. de prédateurs).
+
+Afin de mieux mettre en évidence l'influence de ce facteur, l'équation de base choisie est assez simple. Comme on le verra ci-après, le modèle étudié se base sur une variation du modèle proposé traditionnellement par Lotka et Volterra et décrit dans \cite{}. 
 
 \section{Structure du rapport}
 \label{sec:Structure}

@@ -1,19 +1,32 @@
 \chapter{Modèle à état discret (\textit{2 pages max})}
 \label{ch:modele_discret}
 
-Ce chapitre se propose d'étudier le système présenté en (\ref{eq:syst_continu}) en le transformant sous la forme d'un système discret, puis en en étudiant la points d'équilibre et leur stabilité.
+Ce chapitre se propose d'étudier le système présenté en (\ref{eq:syst_continu}) en le transformant sous la forme d'un système à temps discret, puis en en étudiant les points d'équilibre et leur stabilité.
 
 \section{Modèle proposé}
 
-Ce rapport cherche à étudier l'influence des saisons sur la dynamique d'évolution de deux groupes de population, des proies dont la densité de population sera notée $x$ et des prédateurs de densité $y$, qui chassent ces proies afin de se reproduire. Cette étude se propose de modéliser l'influence des saisons par la multiplication du terme d'interaction entre proies et prédateurs par un facteur harmonique.
-
-Pour cela, cette étude se base sur le système proposé dans \cite{ChaosControl} :
+Le système continu d'origine du modèle étudié ici est le suivant :
 \begin{equation}
+    \label{eq:syst_continu}
     \begin{cases}
-        \dot{x}(t) = a x(t) - \frac{\beta x(t) y(t)}{x + \gamma}  \\
-        \dot{y}(t) = -b y(t) + c \phi (x(t)) y(t)
+        \dot{x}(t) = \alpha x(t) - \beta x(t) y(t) - \gamma x(t)^2 \\
+        \dot{y}(t) = - \rho y(t) + \sigma x(t) y(t) - \nu y(t)^2
     \end{cases}
 \end{equation}
+où $\alpha$, $\beta$, $\gamma$, $\rho$, $\sigma$ et $\nu$ sont des constantes positives.
+
+Afin de pouvoir mener une étude plus approfondie de ce système, on cherche ensuite à le discrétiser dans le temps sous la forme de deux suites chaînées définies par récurrence.
+
+En utilisant l'approximation $\dot{x}(t) = x_{n+1} - x_n$ (resp. $\dot{y}(t) = y_{n+1} - y_n$), on obtient immédiatement le système à temps discret suivant :
+\begin{equation}
+    \label{eq:syst_discret}
+    \begin{cases}
+        x_{n+1} = (1 + \alpha) x_n - \beta x_n y_n - \gamma x_n^2 \\
+        y_{n+1} = (1 - \rho) y_n + \sigma x_n y_n - \nu y_n^2
+    \end{cases}
+\end{equation}
+
+
 \section{Etude théorique des points d'équilibre}
 
 \section{Hypothèses du modèle}
@@ -21,6 +34,6 @@ Pour cela, cette étude se base sur le système proposé dans \cite{ChaosControl
 
 En début de chapitre, il est conseillé d'annoncer ce qui va être traité par la suite et dans quel but. Ensuite, il s’agit de traiter la problématique exposée en début du chapitre. Il est important de citer les différentes sources utilisées pour réaliser votre mini-projet.
 
-Il s’agit ensuite de réexposer le problème de modélisation en s’appuyant sur un formalisme mathématique détaillé, de préciser et d'analyser les hypothèses de modélisation, etc.
+Il s'agit ensuite de réexposer le problème de modélisation en s’appuyant sur un formalisme mathématique détaillé, de préciser et d'analyser les hypothèses de modélisation, etc.
 
 Ce chapitre permettra de répondre notamment aux questions I.1, I.2 et I.3 du sujet, en précisant les méthodes théoriques utilisées.

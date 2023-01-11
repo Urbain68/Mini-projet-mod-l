@@ -29,6 +29,72 @@ En utilisant l'approximation $\dot{x}(t) = x_{n+1} - x_n$ (resp. $\dot{y}(t) = y
 
 \section{Etude théorique des points d'équilibre}
 
+Maintenant que nous disposons d'un système d'équations modélisant la dynamique de deux populations de proies et de prédateurs, il s'agit d'en étudier les points d'équilibre.
+
+On peut tout d'abord remarquer que le point $(x_n, y_n) = (0, 0)$ est un point d'équilibre trivial assez peu intéressant pour le système \ref{eq:syst_discret}.
+
+Si l'on cherche ensuite d'autres potentiels points d'équilibre, on est amené à résoudre le système d'équations :
+\begin{equation}
+    \begin{cases}
+        x^* = (1 + \alpha) x^* - \beta x^* y^* - \gamma (x^*)^2 \\
+        y^* = (1 - \rho) y^* + \sigma x^* y^* - \nu (y^*)^2
+    \end{cases}
+\end{equation}
+d'inconnues $x^*$ et $y^*$ supposées positifs et non nuls.
+
+Sans se soucier pour l'instant des conditions d'existence, en simplifiant les deux lignes par $x^*$ (resp. $y^*$) puis en résolvant, on obtient une solution possible :
+\begin{equation}
+    \label{eq:equilibre}
+    \begin{cases}
+        x^* = \frac{1}{\gamma} (\alpha - \beta y^*) \\
+        y^* = \frac{\sigma \alpha - \rho \gamma}{\beta + \nu \gamma}
+    \end{cases}
+\end{equation}
+
+Or pour qu'un tel point d'équilibre existe, il doit vérifier $x^* > 0$ et $y^* > 0$, c'est-à-dire les deux conditions : $\sigma \alpha > \rho \gamma$ et $\alpha > \beta y^*$.
+\newline
+
+On s'intéresse maintenant à la stabilité des deux points d'équilibre ainsi obtenus.
+
+Pour cela, on va chercher à calculer le linéarisé tangent du système \ref{eq:syst_discret} aux points d'équilibre $(0, 0)$ et \ref{eq:equilibre}.
+Avant cela, on va poser les notations suivantes :
+\begin{align}
+    f : (x, y) \rightarrow (1 + \alpha) x - \beta x y - \gamma x^2 \\
+    g : (x, y) \rightarrow (1 - \rho) y + \sigma x y - \nu y^2
+\end{align}
+de sorte qu'on a : $x_{n+1} = f(x_n, y_n)$ et $y_{n+1} = g(x_n, y_n)$.
+\newline
+Alors on a les dérivées partielles suivantes :
+\begin{align}
+    \frac{\partial f}{\partial x}(x,y) &= 1 + \alpha - \beta y - 2 \gamma x \\
+    \frac{\partial f}{\partial y}(x,y) &= - \beta x \\
+    \frac{\partial g}{\partial x}(x,y) &= \sigma y \\
+    \frac{\partial g}{\partial y}(x,y) &= 1 - \rho + \sigma x - 2 \nu y 
+\end{align}
+
+D'où les matrices linéarisées tangentes suivantes :
+\[
+  J_{1}(0,0) = 
+  \begin{bmatrix}
+    1 + \alpha & 0 \\
+    0 & 1 - \rho
+  \end{bmatrix}
+\]
+
+\[
+  J_{2}(x^*, y^*) = 
+  \begin{bmatrix}
+    1 - \alpha + \beta y^* & - \beta x^* \\
+    \sigma y^* & 1 - \rho + \sigma x^* + 2 \nu y^*
+  \end{bmatrix}
+\]
+
+On peut alors calculer l'expression du polynôme caractéristique de ces deux matrices et en déduire par le critère de Jury une condition de stabilité pour ces points d'équilibre.
+
+Pour l'équilibre $(0,0)$, on trouve : $\chi_{(0,0)} (X) = (X - (1 + \alpha))(X - (1 - \rho))$ et on remarque que $(1 + \alpha)$ est une valeur propre de module strictement supérieur à $1$. Ainsi, le point $(0, 0)$ est un point d'équilibre instable pour le système considéré.
+
+Pour ce qui est de l'équilibre $(x^*, y^*)$, on peut utiliser le critère de Jury pour obtenir une série d'inégalités entre les différents paramètres du problème.
+
 \section{Hypothèses du modèle}
 
 

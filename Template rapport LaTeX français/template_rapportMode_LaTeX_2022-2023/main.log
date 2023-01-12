@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  12 JAN 2023 13:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.12.4)  12 JAN 2023 17:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,12 +711,12 @@ Package pdftex.def Info: figures/smile.jpg  used on input line 66.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 8D9A899DAFD75CD92778CA36B1AB7C79;3028.
+(rerunfilecheck)             Checksum: 28FEDA39D1A24120D51D26038DD9C355;3025.
  ) 
 Here is how much of TeX's memory you used:
  24294 strings out of 474968
  451406 string characters out of 5780081
- 796001 words of memory out of 5000000
+ 795999 words of memory out of 5000000
  45316 multiletter control sequences out of 15000+600000
  486020 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

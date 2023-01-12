@@ -72,30 +72,37 @@ Alors on a les dérivées partielles suivantes :
     \frac{\partial g}{\partial y}(x,y) &= 1 - \rho + \sigma x - 2 \nu y 
 \end{align}
 
-D'où les matrices linéarisées tangentes suivantes :
-\[
-  J_{1}(0,0) = 
+D'où les matrices suivantes pour le linéarisé tangent aux deux points d'équilibre :
+\begin{equation}
+    J_{1}(0,0) = 
   \begin{bmatrix}
     1 + \alpha & 0 \\
     0 & 1 - \rho
   \end{bmatrix}
-\]
-
-\[
+  \hspace{10pt}
+  \text{et}
+  \hspace{10pt}
   J_{2}(x^*, y^*) = 
   \begin{bmatrix}
     1 - \alpha + \beta y^* & - \beta x^* \\
     \sigma y^* & 1 - \rho + \sigma x^* + 2 \nu y^*
   \end{bmatrix}
-\]
+\end{equation}
 
 On peut alors calculer l'expression du polynôme caractéristique de ces deux matrices et en déduire par le critère de Jury une condition de stabilité pour ces points d'équilibre.
 
-Pour l'équilibre $(0,0)$, on trouve : $\chi_{(0,0)} (X) = (X - (1 + \alpha))(X - (1 - \rho))$ et on remarque que $(1 + \alpha)$ est une valeur propre de module strictement supérieur à $1$. Ainsi, le point $(0, 0)$ est un point d'équilibre instable pour le système considéré.
+Pour l'équilibre en $(0,0)$, on trouve : $\chi_{(0,0)} (X) = (X - (1 + \alpha))(X - (1 - \rho))$ et on remarque que $(1 + \alpha)$ est une valeur propre de module strictement supérieur à $1$. Ainsi, le point $(0, 0)$ est un point d'équilibre instable pour le système considéré.
 
-Pour ce qui est de l'équilibre $(x^*, y^*)$, on peut utiliser le critère de Jury pour obtenir une série d'inégalités entre les différents paramètres du problème.
+Pour ce qui est de l'équilibre en $(x^*, y^*)$, on peut utiliser le critère de Jury pour obtenir une série d'inégalités entre les différents paramètres du problème qui caractérisent exactement les conditions d'équilibre stable.
 
 \section{Hypothèses du modèle}
+
+Le modèle proposé plus haut se base implicitement sur plusieurs hypothèses qui simplifient considérablement l'évolution d'une population.
+
+En premier lieux, il suppose que l'évolution des population de proies et de prédateurs ne dépende que des conditions initiales imposées au système. En particulier, ce modèle considère que tous les facteurs multiplicatifs présents dans le système \ref{eq:syst_discret} sont des constantes. Ainsi, on ne prend pas en compte l'influence de facteurs environnementaux comme les saisons ou les évènements météorologiques extraordinaires.
+
+De plus, le modèle de compétition intra-espèce suppose aussi que les deux espèces sont parfaitement isolées du reste de l'univers. Par exemple, on ne suppose pas la présence d'une deuxième espèce de prédateurs qui viendrait réduire la population de proies.
+\newline
 
 
 En début de chapitre, il est conseillé d'annoncer ce qui va être traité par la suite et dans quel but. Ensuite, il s’agit de traiter la problématique exposée en début du chapitre. Il est important de citer les différentes sources utilisées pour réaliser votre mini-projet.

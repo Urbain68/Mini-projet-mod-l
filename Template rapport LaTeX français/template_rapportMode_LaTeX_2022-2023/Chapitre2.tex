@@ -47,6 +47,9 @@ Si l'on cherche ensuite d'autres potentiels points d'équilibre, on est amené �
 \end{equation}
 d'inconnues $x^*$ et $y^*$ supposées positifs et non nuls.
 
+Il reste alors trois cas à traiter : $x^* = 0$ et $y^* > 0$ ; $x^* > 0$ et $y^* = 0$ et enfin $x^* > 0$ et $y^* > 0$.
+Pour les deux premiers cas, on obtient après résolution les points d'équilibre suivant : $(0, - \frac{\nu}{\rho})$ qui n'est pas cohérent car on doit avoir $y^* > 0$ et $(\frac{\alpha}{\gamma}, 0)$, que l'on va noter par la suite $(\bar{x}, 0)$.
+
 Sans se soucier pour l'instant des conditions d'existence, en simplifiant les deux lignes par $x^*$ (resp. $y^*$) puis en résolvant, on obtient une solution possible :
 \begin{equation}
     \label{eq:equilibre}
@@ -77,20 +80,28 @@ Alors on a les dérivées partielles suivantes :
     \frac{\partial g}{\partial y}(x,y) &= 1 - \rho + \sigma x - 2 \nu y 
 \end{align}
 
-D'où les matrices suivantes pour le linéarisé tangent aux deux points d'équilibre :
+D'où les matrices suivantes pour le linéarisé tangent aux trois points d'équilibre :
 \begin{equation}
     J_{1}(0,0) = 
   \begin{bmatrix}
     1 + \alpha & 0 \\
     0 & 1 - \rho
   \end{bmatrix}
-  \hspace{10pt}
+  \hspace{5pt}
   \text{et}
-  \hspace{10pt}
+  \hspace{5pt}
   J_{2}(x^*, y^*) = 
   \begin{bmatrix}
     1 - \alpha + \beta y^* & - \beta x^* \\
     \sigma y^* & 1 - \rho + \sigma x^* + 2 \nu y^*
+  \end{bmatrix}
+  \hspace{5pt}
+  \text{et}
+  \hspace{5pt}
+  J_{3}(\bar{x}, 0) = 
+  \begin{bmatrix}
+    1 - \alpha & - \beta \bar{x} \\
+    0 & 1 - \rho + \sigma \bar{x}
   \end{bmatrix}
 \end{equation}
 

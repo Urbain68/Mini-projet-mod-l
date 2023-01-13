@@ -27,11 +27,8 @@ Qamar Din.
 \bibitem{bifurc}
 Cyrille Rossant.
 \newblock Plotting the bifurcation diagram of a chaotic dynamical system.
-\newblock published on a website.
-
-\bibitem{Seidemann}
-M.~Seidemann.
-\newblock Improving engineering reports and talks.
-\newblock {\em IEEE Transactions on Engineering Writing and Speech}, 1967.
+\newblock
+  \url{<https://ipython-books.github.io/121-plotting-the-bifurcation-diagram-of-a-chaotic-dynamical-system/>}.
+\newblock [Online; accessed 12-January-2023].
 
 \end{thebibliography}

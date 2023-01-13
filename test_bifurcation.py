@@ -41,3 +41,46 @@ ax2.set_title("Analyse pour les prédateurs (y_n)")
 plt.xlim(1, 3)
 fig.suptitle("Diagramme de bifurcation")
 plt.show()
+
+
+
+
+
+# Vérification des conditions de stabilité : 
+alpha_lim = 2.194  # obtenu par lecture graphique donc avec incertitude
+beta_lim = 0.08
+gamma_lim = alpha_lim
+rho_lim = 0.08
+sigma_lim = 0.1*alpha_lim
+nu_lim = 0.04
+
+# Calcul des points d'équilibre pour les paramètres donnés :
+y_star = (sigma_lim*alpha_lim - rho_lim*gamma_lim)/(beta_lim*sigma_lim + nu_lim*gamma_lim)
+x_star = (alpha_lim - beta_lim*y_star)/gamma_lim
+print("point d'equilibre :")
+print(x_star, y_star)
+
+# Coefficient de la jacobienne : J(x*, y*) = [[a1, a2], [a3, a4]]
+a1 = 1 + alpha_lim - beta_lim*y_star - 2*gamma_lim*x_star
+a2 = - beta_lim*x_star
+a3 = sigma_lim*y_star
+a4 = 1 - rho_lim + sigma_lim*x_star + 2*nu_lim*y_star
+print("coeffs matrice :")
+print(a1, a2, a3, a4)
+
+# Coefficients du polynôme caractéristique de la jacobienne : chi(X) = X^2 + b1*X + b2
+b1 = - (a1 + a4)
+b2 = a1*a4 - a2*a3
+print("coeffs polynome :")
+print(f"X^2 + {b1}*X + {b2}")
+
+# Critère de Jury pour des polynômes d'ordre 2 :
+cond1 = b2 + b1 + 1
+cond2 = b2 - b1 + 1
+cond3 = abs(b2) - 1
+print("critère de Jury :")
+print(cond1, cond2, cond3)
+
+# Variante : avec numpy pour obtenir l'expression des valeurs propres de la matrice :
+J_star = np.array([[a1, a2], [a3, a4]])
+print(np.linalg.eigvals(J_star))

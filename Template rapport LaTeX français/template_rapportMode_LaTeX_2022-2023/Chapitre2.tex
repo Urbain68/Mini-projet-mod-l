@@ -55,7 +55,7 @@ Sans se soucier pour l'instant des conditions d'existence, en simplifiant les de
     \label{eq:equilibre}
     \begin{cases}
         x^* = \frac{1}{\gamma} (\alpha - \beta y^*) \\
-        y^* = \frac{\sigma \alpha - \rho \gamma}{\beta + \nu \gamma}
+        y^* = \frac{\sigma \alpha - \rho \gamma}{\sigma \beta + \nu \gamma}
     \end{cases}
 \end{equation}
 
@@ -82,6 +82,7 @@ Alors on a les dérivées partielles suivantes :
 
 D'où les matrices suivantes pour le linéarisé tangent aux trois points d'équilibre :
 \begin{equation}
+    \label{eq:matrices equilibre}
     J_{1}(0,0) = 
   \begin{bmatrix}
     1 + \alpha & 0 \\
@@ -119,11 +120,3 @@ Le modèle proposé plus haut se base implicitement sur plusieurs hypothèses qu
 En premier lieux, il suppose que l'évolution des population de proies et de prédateurs ne dépende que des conditions initiales imposées au système. En particulier, ce modèle considère que tous les facteurs multiplicatifs présents dans le système (\ref{eq:syst_discret}) sont des constantes. Ainsi, on ne prend pas en compte l'influence de facteurs environnementaux comme les saisons ou les évènements météorologiques extraordinaires.
 
 De plus, le modèle de compétition intra-espèce suppose aussi que les deux espèces sont parfaitement isolées du reste de l'univers. Par exemple, on ne suppose pas la présence d'une deuxième espèce de prédateurs qui viendrait réduire la population de proies.
-\vspace{15pt}
-
-
-En début de chapitre, il est conseillé d'annoncer ce qui va être traité par la suite et dans quel but. Ensuite, il s’agit de traiter la problématique exposée en début du chapitre. Il est important de citer les différentes sources utilisées pour réaliser votre mini-projet.
-
-Il s'agit ensuite de réexposer le problème de modélisation en s’appuyant sur un formalisme mathématique détaillé, de préciser et d'analyser les hypothèses de modélisation, etc.
-
-Ce chapitre permettra de répondre notamment aux questions I.1, I.2 et I.3 du sujet, en précisant les méthodes théoriques utilisées.

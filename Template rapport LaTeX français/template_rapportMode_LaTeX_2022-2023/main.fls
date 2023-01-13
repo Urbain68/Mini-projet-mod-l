@@ -977,6 +977,11 @@ INPUT ./Chapitre3.tex
 INPUT Chapitre3.tex
 INPUT ./Chapitre3.tex
 INPUT Chapitre3.tex
+INPUT ./figures/Bifurcation_1.png
+INPUT ./figures/Bifurcation_1.png
+INPUT figures/Bifurcation_1.png
+INPUT ./figures/Bifurcation_1.png
+INPUT ./figures/Bifurcation_1.png
 INPUT ./Chapitre4.tex
 INPUT Chapitre4.tex
 INPUT ./Chapitre4.tex

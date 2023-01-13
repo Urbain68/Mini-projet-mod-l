@@ -18,6 +18,17 @@ T.~Chevet, S.~Font, M.-A. Lefebvre, V.~{Letort-Le Chevalier}, H.~Lhachemi,
 \newblock {\em Modélisation: Représentations et analyse des modèles}.
 \newblock Polycopié CentraleSupélec, 4ème édition, 2022.
 
+\bibitem{ChaosControl}
+Qamar Din.
+\newblock Complexity and chaos control in a discrete-time prey-predator model.
+\newblock {\em Commun Nonlinear Sci Numer Simulat}, Volume 4949(page 113-134),
+  2017.
+
+\bibitem{bifurc}
+Cyrille Rossant.
+\newblock Plotting the bifurcation diagram of a chaotic dynamical system.
+\newblock published on a website.
+
 \bibitem{Seidemann}
 M.~Seidemann.
 \newblock Improving engineering reports and talks.

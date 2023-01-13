@@ -10,10 +10,10 @@ rho = 0.08
 sigma = 0.08
 nu = 0.04
 
-def new_prey_pop(gamma, x_n, y_n):
-    return x_n + (gamma*x_n - beta * np.multiply(x_n, y_n) - gamma * np.multiply(x_n, x_n))
-def new_pred_pop(gamma, x_n, y_n):
-    return y_n + (-rho*y_n + 0.1*gamma * np.multiply(x_n, y_n) - nu * np.multiply(y_n, y_n))
+def new_prey_pop(alpha, x_n, y_n):
+    return x_n + (alpha*x_n - beta * np.multiply(x_n, y_n) - alpha*np.multiply(x_n, x_n))
+def new_pred_pop(alpha, x_n, y_n):
+    return y_n + (-rho*y_n + 0.1*alpha* np.multiply(x_n, y_n) - nu * np.multiply(y_n, y_n))
 
 
 n = 10000
@@ -34,6 +34,10 @@ for i in range(iterations):
     if i >= (iterations - last):
         ax1.plot(r, x, ',k', alpha=.25)
         ax2.plot(r, y, ',k', alpha=.25)
+ax1.set_xlabel(f"$\\alpha \in [1, 3]$")
+ax2.set_xlabel(f"$\\alpha \in [1, 3]$")
+ax1.set_title("Analyse pour les proies (x_n)")
+ax2.set_title("Analyse pour les prédateurs (y_n)")
 plt.xlim(1, 3)
-fig.suptitle("Bifurcation diagram")
+fig.suptitle("Diagramme de bifurcation")
 plt.show()

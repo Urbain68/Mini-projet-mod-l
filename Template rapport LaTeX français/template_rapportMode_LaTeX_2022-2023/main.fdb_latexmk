@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1673543267 "main.aux" "main.bbl" "main" 1673543439 0
-  "./bibliographie.bib" 1673526494 3077 e105bf0711db1510c52d7f0da091dcfe ""
+["bibtex main"] 1673594431 "main.aux" "main.bbl" "main" 1673594435 0
+  "./bibliographie.bib" 1673557672 3378 a2f0a68469175bb60b01a129f1f258ca ""
   "c:/texlive/2022/texmf-dist/bibtex/bst/base/plain.bst" 1670171755 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1673543438 4809 2bf75e42794b4a72dc20092c8cf7abf9 "pdflatex"
+  "main.aux" 1673594434 5430 ce892fb40381f6b40c84989f76e0490f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1673543436 "c:/Users/theon/Documents/GitHub/Mini-projet-mod-l/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex" "main.pdf" "main" 1673543439 0
+["pdflatex"] 1673594432 "c:/Users/theon/Documents/GitHub/Mini-projet-mod-l/Template rapport LaTeX français/template_rapportMode_LaTeX_2022-2023/main.tex" "main.pdf" "main" 1673594435 0
   "Chapitre2.tex" 1673543435 8006 6f30c9037576d761ad1667547c9dab18 ""
-  "Chapitre3.tex" 1673536616 540 051d6f278a9a79491434da3f076ad22c ""
+  "Chapitre3.tex" 1673594427 1430 c86007b9915f68aa3f72671c9ccf61e6 ""
   "Chapitre4.tex" 1669923086 364 05e91b11275f9e5ddb65c7d0b4e0aed4 ""
   "Conclusion.tex" 1669923086 580 07fd11bdb9e7940f540dc5b15f6997d0 ""
   "annexe1.tex" 1669923086 5091 00d9112e2bc4aa59600daca34e5536c9 ""
@@ -202,14 +202,15 @@
   "c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1670178711 4662777 6d30ebd1f2949ad7a3d8a3b5cd0d9f7d ""
   "c:/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1670178915 3063336 ea19e622829aa00b2c43879442d30821 ""
   "c:/texlive/2022/texmf.cnf" 1670178685 713 e69b156964470283e0530f5060668171 ""
+  "figures/Bifurcation_1.png" 1673558866 33090 651fa54ea5a9fe9d2886260feb0ee65a ""
   "figures/smile.jpg" 1669923086 139825 4a1ea5cb6e43500497dbea8c9913edc3 ""
   "introduction.tex" 1673542748 3569 51a23b1b29a668fb0303e28348661073 ""
   "logo.png" 1669923086 8684 759b0348ec987b071c211688eb5da78c ""
-  "main.aux" 1673543438 4809 2bf75e42794b4a72dc20092c8cf7abf9 "pdflatex"
-  "main.bbl" 1673543268 939 0a3bc0b92d94f64b005fa16a2c93b328 "bibtex main"
-  "main.out" 1673543438 3025 28feda39d1a24120d51d26038dd9c355 "pdflatex"
+  "main.aux" 1673594434 5430 ce892fb40381f6b40c84989f76e0490f "pdflatex"
+  "main.bbl" 1673594432 1283 126f8c857883ba82d1ef54ad95089acc "bibtex main"
+  "main.out" 1673594434 3025 f05fc8069243331d4944846ef8a63758 "pdflatex"
   "main.tex" 1669923086 2099 7e8f2a491e015511cdfa4762bfe66367 ""
-  "main.toc" 1673543438 1397 3a9184fb1650033a50bc81b6be78c086 "pdflatex"
+  "main.toc" 1673594434 1397 4889b90239321964432b5fc65d8c2e22 "pdflatex"
   "title.tex" 1672827050 896 b208018d5b3d4a6bc9224c9a35a36eac ""
   (generated)
   "main.aux"

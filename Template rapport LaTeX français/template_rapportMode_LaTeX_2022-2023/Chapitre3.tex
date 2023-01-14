@@ -6,6 +6,7 @@ Afin de valider les constats émis au chapitre \ref{ch:modele_discret}, cette pa
 Pour ce faire, ce chapitre se consacre à l'analyse de bifurcation, comme déjà utilisée dans \cite{ChaosControl}. Le code fourni en complément du rapport est fortement basé sur le tutoriel d'analyse de bifurcation pour Python présenté en \cite{bifurc} avec l'exemple de l'équation logistique.
 
 \section{Obtention du diagramme de bifurcation}
+\label{sec:diagramme_bifurcation}
 
 Afin d'obtenir un diagramme de bifurcation, il a fallu décider d'un paramètre pertinent à faire varier et choisir les valeurs auxquelles fixer tous les autres paramètres. En repartant de l'équation logistique présentée dans \cite{bifurc}, nous avons décidé de faire varier le paramètre $\alpha$, mais aussi d'imposer les deux conditions suivantes :
 \begin{itemize}
@@ -16,6 +17,7 @@ Afin d'obtenir un diagramme de bifurcation, il a fallu décider d'un paramètre 
 Mathématiquement, le diagramme de bifurcation revient à chercher les valeurs d'adhérence des deux suites $(x_n)$ et $(y_n)$. Pour cela, le programme proposé en complément de ce rapport calcule $1000$ itérations du système \ref{eq:syst_discret} pour chaque valeur de $\alpha$ et affiche les $100$ dernières valeurs obtenues. Pour une configuration stable, les simulations effectuées avec tous les paramètres fixés (voir figure \ref{fig:simu param fixes}) nous montrent que le système se stabilise avant la $900$ème itération, ce qui assure l'obtention de valeurs cohérentes.
 
 \section{Analyse de la simulation}
+\label{sec:analyse_simu}
 
 Afin d'analyser les résultats obtenus à la figure \ref{fig:bifurc}, on peut comparer les conditions de stabilité mises en lumière sur le diagramme de bifurcation avec les conditions de stabilités sur les valeurs propres du linéarisé tangent à l'équilibre $(x^*, y^*)$, comme décrit en (\ref{eq:matrices equilibre}).
 
@@ -37,7 +39,7 @@ En effet, on obtient comme valeurs propres pour la matrice :
 \end{equation}
 les deux valeurs propres suivantes $\lambda_1 = -0.94668619$ et $\lambda_2 = 1.33001952$. Or on a $|\lambda_2| > 1$, donc le système devrait être instable, ce qui ne correspond pas au résultat de la simulation en figure \ref{fig:simu param fixes}, effectuée avec les mêmes paramètres que les calculs précédents.
 
-Une explication possible à cette contradiction entre le calcul théorique et la simulation est peut-être la différence entre l'étude du système linéarisé tangent au point d'équilibre à travers la matrice \ref{eq:matrice tangente en x*,y*} et l'étude du véritable système non-linéaire \ref{eq:syst_discret}. En effet, le passage à la jacobienne implique une perte d'information qui purrait expliquer la différence entre les résultats théoriques et la simulation.
+Une explication possible à cette contradiction entre le calcul théorique et la simulation est peut-être la différence entre l'étude du système linéarisé tangent au point d'équilibre à travers la matrice \ref{eq:matrice tangente en x*,y*} et l'étude du véritable système non-linéaire \ref{eq:syst_discret}. En effet, le passage à la jacobienne implique une perte d'information qui pourrait expliquer la différence entre les résultats théoriques et la simulation.
 
 
 

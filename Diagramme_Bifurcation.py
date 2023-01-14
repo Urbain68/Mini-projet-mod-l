@@ -93,7 +93,7 @@ else:
     print("Condition NON vérifiée")
 
 print("Valeur de la condition 3 :",cond3)
-if cond3 > 0:
+if cond3 < 0:
     print("Condition vérifiée")
 else:
     print("Condition NON vérifiée")

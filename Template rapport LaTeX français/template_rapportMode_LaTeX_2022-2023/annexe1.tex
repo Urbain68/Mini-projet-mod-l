@@ -1,4 +1,4 @@
-\chapter*{Annexe 1 (si besoin)}
+\chapter*{Annexe 1}
 \addcontentsline{toc}{chapter}{Annexe 1}
 
 %changer le format des sections, subsections pour apparaittre sans le num de chapitre
@@ -9,11 +9,44 @@
 %recommencer la numérotation des section à "1"
 \setcounter{section}{0}
 
-\section*{Style de rédaction}
-Un rapport technique se rédige dans un style neutre. Il convient en particulier d’éviter un vocabulaire familier ou trop littéraire. On recherche la concision et la clarté en évitant les phrases trop longues et les termes imprécis.
+\section*{Expression du critère de Jury à l'équilibre $(x^*, y^*)$}
 
-L’usage des pronoms personnels (par exemple \textit{nous}) est à limiter à de rare cas précis (par exemple pour mettre l’accent sur un choix déterminant ou pour se démarquer par rapport aux autres).
+Comme mentionné à la fin de la section \ref{sec:etude_theorique}, on peut appliquer le critère de Jury à la matrice $J_2$ dans \ref{eq:matrices equilibre}.
 
-Une énumération est constituée d’objets qui se situent sur le même plan, par ailleurs les éléments de l’énumération doivent avoir la même nature grammaticale.
+Afin de faciliter le calcul, on pose les notations suivantes :
+\begin{align*}
+    a_1 &= 1 +\alpha - \beta y^* - 2 \gamma x^* = 1 - \alpha + \beta y^* \\
+    a_2 &= - \beta x^* \\
+    a_3 &= \sigma y^* \\
+    a_4 &= 1 - \rho + \sigma x^* + 2 \nu y^*
+\end{align*}
 
-Il est fondamental de relire le rapport avec un regard extérieur, en particulier pour vérifier le sens des phrases, ainsi que leur clarté.
+De sorte qu'on a l'égalité suivante :
+\begin{equation*}
+    J_2(x^*, y^*) = 
+    \begin{bmatrix}
+        a_1 & a_2 \\
+        a_3 & a_4 \\
+    \end{bmatrix}
+\end{equation*}
+
+Alors le polynôme caractéristique de $J_2(x^*, y^*)$ a pour expression:
+\begin{align*}
+    \chi(X) &= (X - a_1)(X - a_4) - a_2 a_3 \\
+            &= X^2 - (a_1 + a_4) X + a_1 a_4 - a_2 a_3
+\end{align*}
+
+On peut noter:
+\begin{align*}
+    b_1 &= - (a_1 + a_4) \\
+    b_2 &= a_1 a_4 - a_2 a_3
+\end{align*}
+
+De sorte que $\chi(X) = X^2 + b_1 X + b_2$.
+
+Alors les trois conditions du critère de Jury pour les polynômes d'ordre 2 s'écrivent :
+\begin{align}
+    & b_2 + b_1 + 1 > 0 \\
+    & b_2 - b_1 + 1 > 0 \\
+    &|b_2| - 1 < 0
+\end{align}

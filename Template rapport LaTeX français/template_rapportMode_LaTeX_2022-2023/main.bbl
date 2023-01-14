@@ -3,14 +3,7 @@
 \bibitem{BrauerBiology}
 F.~Brauer and C.~Castillo-Chavez.
 \newblock {\em Mathematical Models in Population Biology and Epidemiology}.
-\newblock Springer New York, NY, 2012.
-
-\bibitem{Holl2stoch}
-N.~Shi C.~Ji, D.~Jiang.
-\newblock Analysis of a predator-prey model with modified leslie-gower and
-  holling-type ii schemes with stochastic perturbation.
-\newblock {\em Journal of Mathematical Analysis and Applications}, Volume 359,
-  Issue 2(page 482-498), 2009.
+\newblock Springer New York, 2012.
 
 \bibitem{Chevet22fr}
 T.~Chevet, S.~Font, M.-A. Lefebvre, V.~{Letort-Le Chevalier}, H.~Lhachemi,
@@ -21,8 +14,15 @@ T.~Chevet, S.~Font, M.-A. Lefebvre, V.~{Letort-Le Chevalier}, H.~Lhachemi,
 \bibitem{ChaosControl}
 Qamar Din.
 \newblock Complexity and chaos control in a discrete-time prey-predator model.
-\newblock {\em Commun Nonlinear Sci Numer Simulat}, Volume 4949(page 113-134),
+\newblock {\em Commun Nonlinear Sci Numer Simulat}, Volume 49(page 113-134),
   2017.
+
+\bibitem{Holl2stoch}
+C.~Ji, D.~Jiang, and N.~Shi.
+\newblock Analysis of a predator-prey model with modified leslie-gower and
+  holling-type ii schemes with stochastic perturbation.
+\newblock {\em Journal of Mathematical Analysis and Applications}, Volume 359,
+  Issue 2(page 482-498), 2009.
 
 \bibitem{bifurc}
 Cyrille Rossant.

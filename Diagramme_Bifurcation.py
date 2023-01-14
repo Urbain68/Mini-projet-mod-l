@@ -47,7 +47,7 @@ plt.show()
 
 
 # Vérification des conditions de stabilité : 
-alpha_lim = 2.194  # obtenu par lecture graphique donc avec incertitude
+alpha_lim = 2.2  # obtenu par lecture graphique donc avec incertitude
 beta_lim = 0.08
 gamma_lim = alpha_lim
 rho_lim = 0.08

@@ -6,30 +6,30 @@ Pour créer un modèle à événement discret, le point important que nous avons
 
 Pour cela il faut déjà comprendre ce qu'est un automate cellulaire et comment il évolue au cours du temps pour en justifier l'utilisation comme modèle. Nous décrirons plutôt le fonctionnement de l'automate cellulaire dans le cas d'étude que dans le cas général par souci de simplicité.
 
-
+\vspace{0.3cm}
 Ainsi notre modélisation se fera sur la base d'une grille de cellules de taille finie dont le bords sont reliés entre eux tel un tor, c'est-à-dire ${(\mathbf{Z}/n\mathbf{Z})^2}$ où n représente la taille limitée du milieu et est un paramètre du modèle à choisir. Chaque cellule peut prendre un état parmi ${0,1,2}$ qui représente respectivement : une cellule vide, une cellule où se situe une proie et une cellule où se situe un prédateur. Enfin les cellules vont interagir avec leurs quatres voisin directs et leur état à l'instant t va changer à l'instant t+1 en fonction d'une liste de règle et des états des celules voisines à l'instant t. Ce modèle d'automate représente donc un milieu spatialement limitée où cohabitent proie et prédateurs. L'utilisation d'un tor permet d'éviter les cas particuliers et de simplifier grandement le modèle en gardant un nombre constant de voisins, au prix d'un éloignement de la réalité.
 
-
+\vspace{0.3cm}
 Les règles permettant la transition d'une cellule entre deux instants sont ce qui permet de modéliser les comportements à observer, notamment la prédation, la naissance ou la mort d'individus mais aussi la compétition entre individus de la même espèce. Chacune de ces règles va être pondérée par une probabilité pour permettre de modéliser les variations naturelles des espèces, telle que la mort par maladie ou accident.
 
 
 On notera $ P_{t}(x_0=i)$ la probabilité que la cellule $x_0$ considérée soit dans l'état i à l'instant t et $\omega_0(i|\eta)$ la probabilité que $x_o$ transitionne vers l'état i connaissant $\eta$ l'état de la grille, c'est-à-dire l'état de ses voisins. On écrira les règles de transition de la cellule $x_0$ en notant $x_1, x_2, x_3, x_4$ ses quatres voisines, l'ordre n'important pas. On rappelle que 0 est une cellule vide, 1 une proie et 2 un prédateur, que $\delta_{j}(i)$ est la fonction de Kronecker valant 1 si $i=j$ et 0 sinon et on considère que tous les résultats sont des probabilités, donc que les constantes aient des valeurs adéquates.
 
-
+\vspace{0.3cm}
 \begin {itemize}
 \item \textit{Naissance de proie}si $x_0=0$, alors la cellule peut-être occupée par une nouvelle proie. La naissance d'une proie dépend de la présence de proies autour. Avec $\frac{\alpha}{4}$ la probabilité de naissance d'une proie, on peut multiplier cette probabilité par le nombre de voisins étant une proie. Ainsi, on obtient \begin{equation}\omega_0(1|x_0=0, x_1=i_1, ..., x_4=i_4)=\frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation}, c'est-à-dire qu'une proie peut naître seulemnt si il y a une proie autour.
 
-
+\vspace{0.3cm}
 \item \textit{Prédation et naissance de prédateur} si $x_0=1$, alors avec $\frac{\sigma}{4}$ la probabilité de réussite d'une chasse, on obtient un résultat similaire à la naissance de proie :\begin{equation} \omega_0(2|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{\sigma}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} Ainsi, plus il y a de prédateurs, plus a proie risque d'être attrapée. On effecue une transition vers l'état 2 car on considère que le prédateur va donner naissance après la prédation.
 
-
+\vspace{0.3cm}
 \item \textit{Mort de prédateur}  si $x_0=2$, alors il y a une probabilité que le prédateur meurt soit de vieillesse, soit d'un affrontement avec un autre individu de son espèce. On peut écrire la transition de cette manière : \begin{equation}\omega_0(0|x_0=2, x_1=i_1, ..., x_4=i_4)=\rho + \frac{\nu}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} où $\rho$ est la probabilité de mort naturelle des prédateurs et $\frac{\nu}{4}$ est la probabilité de mort d'un prédateur après un combat territorial où autre avec un membre de son espèce. 
 
-
+\vspace{0.3cm}
 \item \textit{Compétition entre proies}  si $x_0=1$, pour modéliser la compétition entre proies, par exemple lors de combats territoriaux ou par manque de nourriture, on peut ajouter une transition de l'état 1 vers l'état 0, c'est-à-dire la mort de la proie selon l'équation : \begin{equation}\omega_0(0|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{gamma}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} où $\frac{\gamma}{4}$ est la probabilité de mort d'une proie lors de tels combats.
 
 \end{itemize}
-
+\vspace{0.3cm}
 Ces probabilités de transition peuvent être résumées dans une matrice $A=\omega_0(j|x_0=i, x_1=i_1, ..., x_4=i_4)$, chaque ligne étant l'état initial de la cellule et chaque colonne l'état après transition : 
 $$\begin{pmatrix}
 \zeta_0 & \frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} & 0 \\
@@ -40,4 +40,5 @@ $$\begin{pmatrix}
 Avec $\zeta_i$ la probabilité que la cellule ne change pas d'état, probabilité trouvée d'après la formule des probabilités complète qui dit que \begin{equation}
 \forall j, \sum_{i=0}^2\omega_0(j|x_0=i, x_1=i_1, ..., x_4=i_4)=1\end{equation}
 
+\vspace{0.3cm}
 Nous avons ainsi toutes les probabilités de transition d'une cellule selon l'état de la grille à un instant donné. La modélisation de l'automate cellulaire peut ensuite se faire par simulation numérique en choisissant un état de départ de chaque cellule pour t=0, puis en simulant les transitions grâce aux probabilités de transition définies ci-dessus, c'est-à-dire en regardant l'état initial de la cellule à l'instant t, en calculant la probabilité de transition vers chacun des états possibles selon les règles ci-dessus, certaines transitions ayant une probabilité 0, puis en tirant un nombre aléatoire et en effectuant la transition associée à ce nombre. 

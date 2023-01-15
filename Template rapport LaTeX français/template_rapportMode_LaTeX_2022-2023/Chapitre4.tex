@@ -17,24 +17,24 @@ On notera $ P_{t}(x_0=i)$ la probabilité que la cellule $x_0$ considérée soit
 
 
 \begin {itemize}
-\item \textit{Naissance de proie}si $x_0=0$, alors la cellule peut-être occupée par une nouvelle proie. La naissance d'une proie dépend de la présence de proies autour. Avec $\frac{\textbf{a}}{4}$ la probabilité de naissance d'une proie, on peut multiplier cette probabilité par le nombre de voisins étant une proie. Ainsi, on obtient \begin{equation}\omega_0(1|x_0=0, x_1=i_1, ..., x_4=i_4)=\frac{\textbf{a}}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation}, c'est-à-dire qu'une proie peut naître seulemnt si il y a une proie autour.
+\item \textit{Naissance de proie}si $x_0=0$, alors la cellule peut-être occupée par une nouvelle proie. La naissance d'une proie dépend de la présence de proies autour. Avec $\frac{\alpha}{4}$ la probabilité de naissance d'une proie, on peut multiplier cette probabilité par le nombre de voisins étant une proie. Ainsi, on obtient \begin{equation}\omega_0(1|x_0=0, x_1=i_1, ..., x_4=i_4)=\frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation}, c'est-à-dire qu'une proie peut naître seulemnt si il y a une proie autour.
 
 
-\item \textit{Prédation et naissance de prédateur} si $x_0=1$, alors avec $\frac{\textbf{b}}{4}$ la probabilité de réussite d'une chasse, on obtient un résultat similaire à la naissance de proie :\begin{equation} \omega_0(2|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{\textbf{b}}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} Ainsi, plus il y a de prédateurs, plus a proie risque d'être attrapée. On effecue une transition vers l'état 2 car on considère que le prédateur va donner naissance après la prédation.
+\item \textit{Prédation et naissance de prédateur} si $x_0=1$, alors avec $\frac{\sigma}{4}$ la probabilité de réussite d'une chasse, on obtient un résultat similaire à la naissance de proie :\begin{equation} \omega_0(2|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{\sigma}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} Ainsi, plus il y a de prédateurs, plus a proie risque d'être attrapée. On effecue une transition vers l'état 2 car on considère que le prédateur va donner naissance après la prédation.
 
 
-\item \textit{Mort de prédateur}  si $x_0=2$, alors il y a une probabilité que le prédateur meurt soit de vieillesse, soit d'un affrontement avec un autre individu de son espèce. On peut écrire la transition de cette manière : \begin{equation}\omega_0(0|x_0=2, x_1=i_1, ..., x_4=i_4)=\gamma + \frac{\textbf{c}}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} où $\gamma$ est la probabilité de mort naturelle des prédateurs et $\frac{\textbf{c}}{4}$ est la probabilité de mort d'un prédateur après un combat territorial où autre avec un membre de son espèce. 
+\item \textit{Mort de prédateur}  si $x_0=2$, alors il y a une probabilité que le prédateur meurt soit de vieillesse, soit d'un affrontement avec un autre individu de son espèce. On peut écrire la transition de cette manière : \begin{equation}\omega_0(0|x_0=2, x_1=i_1, ..., x_4=i_4)=\rho + \frac{\nu}{4}\sum_{k=1}^{4}\delta_{2}(i_k)\end{equation} où $\rho$ est la probabilité de mort naturelle des prédateurs et $\frac{\nu}{4}$ est la probabilité de mort d'un prédateur après un combat territorial où autre avec un membre de son espèce. 
 
 
-\item \textit{Compétition entre proies}  si $x_0=1$, pour modéliser la compétition entre proies, par exemple lors de combats territoriaux ou par manque de nourriture, on peut ajouter une transition de l'état 1 vers l'état 0, c'est-à-dire la mort de la proie selon l'équation : \begin{equation}\omega_0(0|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{\textbf{d}}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} où $\frac{\textbf{d}}{4}$ est la probabilité de mort d'une proie lors de tels combats.
+\item \textit{Compétition entre proies}  si $x_0=1$, pour modéliser la compétition entre proies, par exemple lors de combats territoriaux ou par manque de nourriture, on peut ajouter une transition de l'état 1 vers l'état 0, c'est-à-dire la mort de la proie selon l'équation : \begin{equation}\omega_0(0|x_0=1, x_1=i_1, ..., x_4=i_4)=\frac{gamma}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} où $\frac{\gamma}{4}$ est la probabilité de mort d'une proie lors de tels combats.
 
 \end{itemize}
 
 Ces probabilités de transition peuvent être résumées dans une matrice $A=\omega_0(j|x_0=i, x_1=i_1, ..., x_4=i_4)$, chaque ligne étant l'état initial de la cellule et chaque colonne l'état après transition : 
 $$\begin{pmatrix}
-\zeta_0 & \frac{\textbf{a}}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} & 0 \\
-\frac{\textbf{d}}{4}\sum_{k=1}^{4}\delta_{1}(i_k) & \zeta_1 & \frac{\textbf{b}}{4}\sum_{k=1}^{4}\delta_{2}(i_k) \\
-\gamma + \frac{\textbf{c}}{4}\sum_{k=1}^{4}\delta_{2}(i_k) & 0 & \zeta_2
+\zeta_0 & \frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} & 0 \\
+\frac{\gamma}{4}\sum_{k=1}^{4}\delta_{1}(i_k) & \zeta_1 & \frac{\sigma}{4}\sum_{k=1}^{4}\delta_{2}(i_k) \\
+\rho + \frac{\nu}{4}\sum_{k=1}^{4}\delta_{2}(i_k) & 0 & \zeta_2
 \end{pmatrix}$$
 
 Avec $\zeta_i$ la probabilité que la cellule ne change pas d'état, probabilité trouvée d'après la formule des probabilités complète qui dit que \begin{equation}

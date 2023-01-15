@@ -11,6 +11,13 @@ T.~Chevet, S.~Font, M.-A. Lefebvre, V.~{Letort-Le Chevalier}, H.~Lhachemi,
 \newblock {\em Modélisation: Représentations et analyse des modèles}.
 \newblock Polycopié CentraleSupélec, 4ème édition, 2022.
 
+\bibitem{Carvalho}
+K.~C. de~Carvalho and T.~Tomé.
+\newblock Self-organized patterns of coexistence out of a predator-prey
+  cellular automaton.
+\newblock {\em International Journal of Modern Physics C}, Volume 17(page
+  1647-1662), 2006.
+
 \bibitem{ChaosControl}
 Qamar Din.
 \newblock Complexity and chaos control in a discrete-time prey-predator model.

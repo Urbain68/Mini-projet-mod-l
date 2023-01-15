@@ -1,7 +1,7 @@
 \chapter{Modèle à évènements discrets}
 \label{chapitre:etat_discret}
 
-Pour créer un modèle à événement discret, le point important que nous avons choisi de modéliser est l'importance d'un milieu spatialement limité pour la rencontre entre proies et prédateurs ainsi que pour la compétition intra-espèce. Pour cela, la littérature nous amène vers l'utilisation d'automates cellulaires probabilistes \cite{Karvhallo} . En effet, cette modélisation nous permet de prendre en compte la répartition spatiale des deux espèces et de la relier aux variations temporelles des deux populations. 
+Pour créer un modèle à événement discret, le point important que nous avons choisi de modéliser est l'importance d'un milieu spatialement limité pour la rencontre entre proies et prédateurs ainsi que pour la compétition intra-espèce. Pour cela, la littérature nous amène vers l'utilisation d'automates cellulaires probabilistes \cite{Carvalho} . En effet, cette modélisation nous permet de prendre en compte la répartition spatiale des deux espèces et de la relier aux variations temporelles des deux populations. 
 
 
 Pour cela il faut déjà comprendre ce qu'est un automate cellulaire et comment il évolue au cours du temps pour en justifier l'utilisation comme modèle. Nous décrirons plutôt le fonctionnement de l'automate cellulaire dans le cas d'étude que dans le cas général par souci de simplicité.
@@ -31,11 +31,14 @@ On notera $ P_{t}(x_0=i)$ la probabilité que la cellule $x_0$ considérée soit
 \end{itemize}
 
 Ces probabilités de transition peuvent être résumées dans une matrice $A=\omega_0(j|x_0=i, x_1=i_1, ..., x_4=i_4)$, chaque ligne étant l'état initial de la cellule et chaque colonne l'état après transition : 
-$$\begin{pmatrix}
-\zeta_0 & \frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k)\end{equation} & 0 \\
-\frac{\gamma}{4}\sum_{k=1}^{4}\delta_{1}(i_k) & \zeta_1 & \frac{\sigma}{4}\sum_{k=1}^{4}\delta_{2}(i_k) \\
-\rho + \frac{\nu}{4}\sum_{k=1}^{4}\delta_{2}(i_k) & 0 & \zeta_2
-\end{pmatrix}$$
+\begin{equation}
+    \begin{pmatrix}
+        \zeta_0 & \frac{\alpha}{4}\sum_{k=1}^{4}\delta_{1}(i_k) & 0 \\
+        \frac{\gamma}{4}\sum_{k=1}^{4}\delta_{1}(i_k) & \zeta_1 & \frac{\sigma}{4}\sum_{k=1}^{4}\delta_{2}(i_k) \\
+        \rho + \frac{\nu}{4}\sum_{k=1}^{4}\delta_{2}(i_k) & 0 & \zeta_2
+    \end{pmatrix}
+\end{equation}
+
 
 Avec $\zeta_i$ la probabilité que la cellule ne change pas d'état, probabilité trouvée d'après la formule des probabilités complète qui dit que \begin{equation}
 \forall j, \sum_{i=0}^2\omega_0(j|x_0=i, x_1=i_1, ..., x_4=i_4)=1\end{equation}

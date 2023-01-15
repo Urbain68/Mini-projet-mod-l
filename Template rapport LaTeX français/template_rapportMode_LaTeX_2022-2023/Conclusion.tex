@@ -10,7 +10,7 @@ L'étude mathématique de ce modèle a permis de mettre en évidence quels en so
 Ces résultats informatiques ont ensuite été confrontés à l'analyse théorique de cette même configuration avec pour résultat une apparente contradiction. Cependant, celle-ci pourrait être expliquée par les différentes approximations adoptées pour l'étude théorique et la résoltuion informatique du problème.
 
 \vspace{0.3cm}
-\textbf{paragraphe sur le SED}
+Le modèle d'automate celulaire proposé reprend en grande partie le fonctionnement de modèles déjà présents dans la littérature en ajoutant certaines règles de transition liées à la compétition à l'intérieur d'une espèce, pour la nourriture ou le territoire. Ce modèle a notamment pour vocation de modéliser un espace de cohabitation limité, mais l'ajout de nouvelles règles de transition permet la modélisation des phénomènes de compétition. Ce modèle a surtout vocation à être simulé numériquement dû à sa nature probabiliste et à sa forte dépendance aux paramètres initiaux.
 
 \section{Perspectives}
 
@@ -22,3 +22,9 @@ Une autre piste serait d'ajouter d'autres espèces, ce qui pourrait introduire u
 
 \vspace{0.3cm}
 Enfin, afin de rendre les simulation plus réalistes, il pourrait être avantageux de faire des mesures dans un milieu naturel afin d'obtenir une estimation de la valeur que l'on pourrait assigner aux différents coefficients $\alpha, \beta, \gamma, \rho, \sigma$ et $\nu$.
+
+\vspace{0.3cm}
+En ce qu'il s'agit de complexifier l'automate cellulaire, il est clairement possible de rendre le modèle plus en accord avec la réalité notamment en ajoutnat des nouvelles règles de transition ou des états. 
+Par exemple, pour simuler la compétition entre individus, le modèle actuel contient aussi la compétition entre parent et enfant dès la naissance et entre tous les individus de l'espèce, alors que parfois, les individus s'organisent en groupe sans compétition interne. On pourrait alors rajouter un état par groupe en gardant des règles de transition similaires mais en changeant surtout la règle gérant la compétition pour ne prendre en compte que les individus de groupes différents. 
+De manière similaire, on pourrait classifier la population en indvidus jeunes et adultes, avec une règle de transition correspondant à la croissance et une compétition qui n'a lieu qu'entre individus adultes, les jeunes restant assciés à leurs parents. 
+Il est ainsi possible de beaucoup complexifier le modèle, mais cela dépend avant tout de la population que l'on cherche à modéliser et aussi de comment on veut résoudre le système. Un système très complexe sera plus difficilement prédictible de manière calculatoire et nécessitera des simulations numériques nombreuses avec des échantillonages et calculs statistiques.
